@@ -1,19 +1,19 @@
 <template>
-  <div style="width: 100%;max-height: 90vh;text-align: center;">
+  <div style="width: 100%;max-height: 90vh;text-align: center; ">
     <div style="display: flex;justify-content: center;">
-      <a-card :loading="isLoad" :title="$t('ipLocInfo')" hoverable style="width: 90vw;margin: 4vh auto;height: 90vh;">
+      <a-card :loading="isLoad" :title="$t('ipLocInfo')" hoverable style="width: 90vw;margin: 4vh auto;height: 90vh;border-radius: 10px;">
         <template #extra>
           <a-button type="primary" shape="circle" @click="initData">
             <template #icon><undo-outlined /></template>
           </a-button>
         </template>
-        <a-list bordered>
+        <a-list bordered style="border-top-left-radius: 10px;border-top-right-radius: 10px">
           <a-list-item v-for="(value, key) in loc" :key="key">
             <a-list-item-meta :title="locDict[key]" />
             <a-list-item-meta :description="value" />
           </a-list-item>
         </a-list>
-        <div id="mapContainer" style="height: 100%;width:100%;margin: 0 auto;"></div>
+        <div id="mapContainer" style="height: 100%;width:100%;margin: 0 auto;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;"></div>
       </a-card>
     </div>
   </div>
@@ -115,4 +115,7 @@ export default {
 }
 </script>
 <style scoped>
+.ant-card-body{
+  border-radius: 10px;
+}
 </style>
