@@ -8,6 +8,8 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 //ant-design-vue
 import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
+//mock
+import { viteMockServe } from 'vite-plugin-mock'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -25,6 +27,11 @@ export default defineConfig({
         AntDesignVueResolver({ importStyle: false, resolveIcons: true })
       ]
     }),
+    viteMockServe({
+      supportTs: true,
+      logger: false,
+      mockPath: "./mock/"
+    })
   ],
 
   resolve: {
