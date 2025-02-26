@@ -4,7 +4,7 @@
 
 ## Demo
 
-[https://cflocation.pages.dev/](https://cflocation.pages.dev/)
+[https://iploc.zzdx.us.kg/](https://iploc.zzdx.us.kg/)
 
 ## 部署方法
 
@@ -13,3 +13,4 @@
 3. 通过git方式部署pages
 4. 框架预设选择vue即可
 5. 确认部署
+6. 开启cloudflare控制面板转换规则中的添加访问者位置标头选项
