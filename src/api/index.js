@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { message } from 'ant-design-vue';
 
-axios.defaults.baseURL = 'https://api.hndx.eu.org'
+axios.defaults.baseURL = '/'
 axios.defaults.timeout = 10000
 //错误处理
 axios.interceptors.response.use(
