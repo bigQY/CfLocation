@@ -1,35 +1,15 @@
-# ipLoc
+# CfLocation
 
-This template should help get you started developing with Vue 3 in Vite.
+利用cloudflare提供的功能,根据IP地址获取地理位置信息。
 
-## Recommended IDE Setup
+## Demo
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+[https://cflocation.pages.dev/](https://cflocation.pages.dev/)
 
-## Customize configuration
+## 部署方法
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+1. 克隆本项目
+2. 在cloudflare创建一个pages项目
+3. 通过git方式部署pages
+4. 框架预设选择vue即可
+5. 确认部署
