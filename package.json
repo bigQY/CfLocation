@@ -13,6 +13,7 @@
     "@ant-design/icons-vue": "^7.0.1",
     "ant-design-vue": "^4.2.6",
     "axios": "^1.8.1",
+    "leaflet": "^1.9.4",
     "mockjs": "^1.1.0",
     "vite-plugin-mock": "^3.0.2",
     "vue": "^3.5.13",
