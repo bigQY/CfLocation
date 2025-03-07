@@ -7,6 +7,9 @@ import { ref, onMounted, onBeforeUnmount, nextTick, watch } from 'vue'
 import AMapLoader from '@amap/amap-jsapi-loader'
 import 'leaflet/dist/leaflet.css'
 import 'leaflet/dist/leaflet.js'
+import 'leaflet/dist/images/marker-icon.png'
+import 'leaflet/dist/images/marker-icon-2x.png'
+import 'leaflet/dist/images/marker-shadow.png'
 
 const props = defineProps({
   loc: {
