@@ -6,10 +6,15 @@
 import { ref, onMounted, onBeforeUnmount, nextTick, watch } from 'vue'
 import AMapLoader from '@amap/amap-jsapi-loader'
 import 'leaflet/dist/leaflet.css'
-import 'leaflet/dist/leaflet.js'
-import 'leaflet/dist/images/marker-icon.png'
-import 'leaflet/dist/images/marker-icon-2x.png'
-import 'leaflet/dist/images/marker-shadow.png'
+import L from 'leaflet'
+
+// 手动设置Leaflet的图标路径
+delete L.Icon.Default.prototype._getIconUrl
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: new URL('leaflet/dist/images/marker-icon-2x.png', import.meta.url).href,
+  iconUrl: new URL('leaflet/dist/images/marker-icon.png', import.meta.url).href,
+  shadowUrl: new URL('leaflet/dist/images/marker-shadow.png', import.meta.url).href
+})
 
 const props = defineProps({
   loc: {
@@ -68,7 +73,7 @@ const initAmap = async () => {
   })
     .then((AMap) => {
       map = new AMap.Map(mapContainer.value)
-      map.setZoom(8)
+      map.setZoom(10)
       map.setCenter([props.loc['cf-iplongitude'], props.loc['cf-iplatitude']])
       const marker = new AMap.Marker({
         position: [props.loc['cf-iplongitude'], props.loc['cf-iplatitude']],
